@@ -1,0 +1,1497 @@
+:root {
+    --brown: #4B3621;
+    --green: #245428;
+    --light-green: #BAF0B5;
+    --beige: #F5F5DC;
+    --white: #ffffff;
+    --black: #000000;
+    --caramel: #C5A07D;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    background-color: var(--beige);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* vvv Header Section vvv*/
+
+header {
+    background-color: var(--brown);
+    color: var(--white);
+    height: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 64px;
+    padding-right: 64px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.website-title {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--white);
+    line-height: 1;
+}
+
+.website-title p {
+    margin: 0;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.header-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-block;
+    transition: color 0.2s;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.header-nav a:hover {
+    transform: scale(1.1);
+}
+
+.header-nav a:active {
+    transform: scale(0.9);
+}
+
+.header-nav a.active {
+    position: relative;
+    color: var(--light-green);
+    font-weight: 600;
+}
+
+.header-nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-green);
+    border-radius: 1px;
+}
+
+.header-cart {
+    color: var(--white);
+}
+
+.header-cart a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-cart svg {
+    width: 24px;
+    height: 24px;
+    color: inherit;
+    stroke: currentColor;
+}
+
+.header-cart a.active {
+    position: relative;
+    color: var(--light-green);
+    font-weight: 600;
+}
+
+/* ^^^ Header Section ^^^*/
+
+/* vvv Footer Section vvv*/
+
+/* vvv Footer Container vvv */
+footer {
+    margin-top: auto;
+    background-color: var(--brown);
+    color: var(--white);
+    height: 308px;
+    box-sizing: border-box;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+.inner-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 60px 64px;
+    box-sizing: border-box;
+}
+
+/* ^^^ Footer Container ^^^ */
+
+/* vvv Dimension for Containers vvv */
+.footer-left,
+.footer-center,
+.footer-right {
+    width: 324px;
+    height: 188px;
+}
+
+/* ^^^ Dimension for Containers ^^^ */
+
+/* vvv Left Container vvv */
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 324px;
+    height: 188px;
+}
+
+.footer-logo {
+    width: 324px;
+    height: 125px;
+    overflow: hidden;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.social-links {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ^^^ Left Container ^^^ */
+
+/* vvv Center Container vvv */
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 324px;
+    height: 188px;
+}
+
+.legal-stuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.important-links ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+.important-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.copyright-separator p {
+    margin: 0;
+}
+
+/* ^^^ Center Container ^^^ */
+
+/* vvv Right Container vvv */
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 324px;
+    height: 188px;
+}
+
+.visit-title h1 {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+}
+
+.visit-links ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+.visit-links a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* ^^^ right Container ^^^ */
+
+/*  ^^^ Footer Section ^^^*/
+
+
+
+/* ===== Home Page Styles =====*/
+/* vvv Hero Section vvv */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 819px;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(251, 251, 226, 0.9) 0%,
+        rgba(251, 251, 226, 0.4) 50%,
+        rgba(251, 251, 226, 0)   100%
+    );
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 104px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title-container {
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-family: "Bangers", system-ui;
+    font-size: 96px;
+    color: var(--brown);
+    line-height: 1;
+    margin: 0;
+}
+
+.hero-title {
+    font-family: "Bangers", system-ui;
+    font-size: 96px;
+    color: var(--green);
+    line-height: 1;
+    margin: 0 0 0.5rem;
+}
+
+.hero-description {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    max-width: 520px;
+    line-height: 1.6;
+    margin: 0 0 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 24px 80px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: var(--green);
+    color: var(--white);
+    border: 2px solid var(--green);
+}
+
+.btn-primary:active {
+  transform: scale(0.9);
+  background-color: #1b3e1f;    /* darker green */
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--brown);
+    border: 2px solid var(--brown);
+}
+
+.btn-primary i {
+    width: 20px;
+    height: 20px;
+    color: inherit;
+    stroke: currentColor;
+}
+
+/* ^^^ Hero Section ^^^ */
+
+
+
+/* vvv Philosophy Section vvv */
+
+.philosophy-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 629px;
+    padding: 80px 64px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.philosophy-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.philosophy-title h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--brown);
+    letter-spacing: 0.05em;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.divider-line {
+    height: 2px;
+    flex: 1;
+}
+
+.divider-line.left {
+    background: linear-gradient(to left, var(--brown), transparent);
+}
+
+.divider-line.right {
+    background: linear-gradient(to right, var(--brown), transparent);
+}
+
+.divider i {
+    width: 24px;
+    height: 24px;
+    color: var(--brown);
+    stroke-width: 2;
+    margin: 0 16px;
+    flex-shrink: 0;
+}
+
+.philosophy-cards {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    width: 1072px;
+    height: 308px;
+    margin: 0 auto;
+}
+
+.philosophy-card {
+    width: 325px;
+    height: 308px;
+    padding: 48px;
+    box-sizing: border-box;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    width: 48px;
+    height: 48px;
+    color: var(--green);
+    stroke-width: 2;
+}
+
+
+.card-header {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brown);
+    padding-top: 16px;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.card-text {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: var(--black);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ^^^ Philosophy Section ^^^ */
+
+
+
+/* vvv Products Section vvv */
+.products-section {
+    width: 100%;
+    height: 740px;
+    background-color: var(--white);
+    padding: 80px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 0 64px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.products-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+}
+
+.sub-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 385px;
+    height: 64px;
+}
+
+.sub-title p:first-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--green);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sub-title-main {
+    font-family: "Bangers", system-ui;
+    font-size: 32px;
+    color: var(--brown);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.menu-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.menu-link:hover {
+    transform: scale(1.05);
+}
+
+.menu-link i {
+    width: 20px;
+    height: 20px;
+    color: inherit;
+    stroke: currentColor;
+}
+
+.products-cards {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    height: 436px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.product-card {
+    width: 500px;
+    height: 388px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    background: var(--beige);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.cart-content {
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-product-title {
+    font-family: "Bangers", system-ui;
+    font-size: 40px;
+    color: var(--brown);
+    margin: 0;
+    line-height: 1;
+}
+
+.cart-content p:last-child {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+}
+
+/* ^^^ Products Section ^^^ */
+
+/* vvv Fur-sidents Section vvv */
+
+.fursidents-section {
+    max-width: 1200px;
+    width: 100%;
+    height: 503px;
+    margin: 0 auto;
+    padding: 80px 64px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.fursidents-header {
+    width: 1072px;
+    height: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fursidents-header p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 32px;
+    color: var(--brown);
+    margin: 0;
+}
+
+.fursidents-header p:last-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0;
+}
+
+.fursidents-cards {
+    width: 1072px;
+    height: 200px;
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+}
+
+.fursident-bg {
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+    background: linear-gradient(
+        to bottom,
+        rgba(36, 84, 40, 0) 0%,
+        rgba(36, 84, 40, 1) 10%
+    );
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fursident-card {
+    width: 296px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    gap: 4px;
+    border-radius: 25px;
+    background-color: #F9F9E8;
+}
+
+.fursident-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fursident-card p:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--brown);
+    margin: 0;
+    text-align: center;
+    line-height: 24px;
+}
+
+.fursident-card p:last-of-type {
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ^^^ Fur-sidents Section ^^^ */
+
+/* ===== Home Page Styles =====*/
+
+
+
+/* ===== Account Page Styles =====*/
+
+/* ^^^ Sign-up Section ^^^ */
+
+.sign-up {
+    width: 100%;
+    max-width: 1280px;
+    min-height: 940px; 
+    margin: 0 auto;
+    padding: 50px 140px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+}
+
+.signup-form {
+    width: 1000px;
+    min-height: 840px; 
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.signup-left {
+    width: 500px;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.signup-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(75, 54, 33, 0.4) 0%,
+        rgba(77, 64, 51, 0.4) 50%,
+        rgba(75, 54, 33, 1) 110%
+    );
+    z-index: 1;
+}
+
+.signup-image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    z-index: 2;
+    color: var(--white);
+}
+
+.signup-image-text p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    margin: 0 0 8px;
+    line-height: 1.1;
+}
+
+.signup-image-text p:last-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.signup-right {
+    width: 500px;
+    background: var(--white);
+    padding: 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    overflow-y: auto; 
+}
+
+.signup-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signup-header p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.signup-header p:last-child {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.owner-information {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.owner-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--brown);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.owner-label i {
+    width: 20px;
+    height: 20px;
+    color: var(--green);
+}
+
+.fillup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.input-group input {
+    padding: 16px;
+    border: 2px solid #E0D6C8;
+    border-radius: 12px;
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: var(--black);
+    background: var(--beige);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--green);
+}
+
+.terms-agreement {
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    color: var(--black);
+    line-height: 1.5;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--green);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.checkbox-label a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--green);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #1b3e1f;
+    transform: scale(1.02);
+}
+
+.btn-signup:active {
+  transform: scale(0.9);
+  background-color: #1b3e1f;
+}
+
+.btn-signup i {
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+}
+
+.signup-login {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    margin: 0;
+}
+
+.signup-login a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-login a:hover {
+    text-decoration: underline;
+}
+
+/* ^^^ Sign-up Section ^^^ */
+
+/* vvv Sign-in Section vvv */
+
+.sign-in {
+    width: 100%;
+    max-width: 1280px;
+    min-height: 940px;
+    margin: 0 auto;
+    padding: 50px 140px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+}
+
+.signin-form {
+    width: 1000px;
+    min-height: 840px;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.signin-left {
+    width: 500px;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.signin-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.signin-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(251, 251, 226, 0.9) 0%,
+        rgba(251, 251, 226, 0.4) 50%,
+        rgba(251, 251, 226, 0) 100%
+    );
+    z-index: 1;
+}
+
+.signin-image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    z-index: 2;
+    color: var(--brown);
+}
+
+.signin-image-text p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    margin: 0 0 8px;
+    line-height: 1.1;
+}
+
+.signin-image-text p:last-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+    color: var(--brown);
+}
+
+.signin-right {
+    width: 500px;
+    background: var(--white);
+    padding: 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    overflow-y: auto;
+}
+
+.signin-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signin-header p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.signin-header p:last-child {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.signin-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.forgot-password {
+    text-align: right;
+}
+
+.forgot-password a {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn-signin {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--green);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-signin:active {
+  transform: scale(0.9);
+  background-color: #1b3e1f;
+}
+
+.btn-signin:hover {
+    background-color: #1b3e1f;
+    transform: scale(1.02);
+}
+
+.btn-signin i {
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+}
+
+.signin-signup {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    margin: 0;
+}
+
+.signin-signup a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signin-signup a:hover {
+    text-decoration: underline;
+}
+
+/* ^^^ Sign-in Section ^^^ */
+
+/* vvv User Profile Section vvv */
+
+.user-profile {
+    width: 100%;
+    max-width: 1280px;
+    min-height: 940px;
+    margin: 0 auto;
+    padding: 50px 140px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+}
+
+.profile-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 60px 80px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    max-width: 520px;
+    width: 100%;
+}
+
+.profile-avatar-wrapper {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--green), var(--light-green));
+    margin-bottom: 24px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    display: block;
+}
+
+.profile-card h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 40px;
+    color: var(--brown);
+    margin: 0 0 8px;
+}
+
+.profile-email {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: var(--black);
+    margin: 0 0 24px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: var(--brown);
+}
+
+.stat i {
+    width: 24px;
+    height: 24px;
+    color: var(--green);
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.profile-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.profile-actions .btn i {
+    width: 20px;
+    height: 20px;
+}
+
+#logoutBtn {
+    background-color: var(--brown);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#logoutBtn:hover {
+    background-color: #3a2a1a;
+    transform: scale(1.02);
+}
+
+/* ^^^ User Profile Section ^^^ */
+
+/* ===== Account Page Styles =====*/
+
+/* ===== Menu Page Styles==== */
+
+/* vvv Menu Header Section vvv */
+
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.menu-header p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0;
+}
+
+.menu-separator {
+    width: 120px;
+    height: 3px;
+    background-color: var(--green);
+    border-radius: 2px;
+    margin: 8px 0;
+}
+
+.menu-header p:last-child {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+    max-width: 600px;
+}
+
+.menu-pastries,
+.menu-cakes-grid,
+.menu-bundles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding: 0 64px 60px;
+}
+
+/* ^^^ Menu Header Section ^^^ */
+
+/* vvv Pastry Section vvv */
+
+.pastry-card {
+    width: 450px;
+    background-color: #E4E4CC;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.pastry-card:hover {
+    transform: translateY(-4px);
+}
+
+.pastry-image {
+    width: 450px;
+    height: 450px;
+}
+
+.pastry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pastry-description {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.name-price p:first-child {
+    font-family: "Bangers", system-ui;
+    font-size: 36px;
+    color: var(--brown);
+    margin: 0;
+    line-height: 1;
+}
+
+.name-price p:last-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--green);
+    margin: 0;
+}
+
+.pastry-description p:last-child {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: var(--black);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.btn-add-cart {
+    width: 400px;
+    height: 50px;
+    margin: 0 auto 25px auto;
+    background-color: var(--green);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-sizing: border-box;
+}
+
+.btn-add-cart:active {
+  transform: scale(0.9);
+  background-color: #1b3e1f;
+}
+
+.btn-add-cart:hover {
+    background-color: #1b3e1f;
+}
+
+.btn-add-cart i {
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+}
+
+/* ^^^ Pastry Section ^^^ */
+
+/* ===== Menu Page Styles==== */

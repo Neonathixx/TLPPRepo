@@ -1,0 +1,17 @@
+<?php
+
+    $host = "153.92.10.173";
+    $user = "u943893873_HM";
+    $password = "LittlePawPatissier1";
+    $database = "u943893873_TLPP";
+
+    $conn = new mysqli($host, $user, $password, $database);
+
+    if($conn === TRUE){
+        echo 'Connected Successfully!';
+    }
+    else if ($conn->connect_error){
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+?>
