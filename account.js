@@ -1,41 +1,76 @@
-// account.js – Front-end simulation for Account page
-// Remove or replace this file when connecting to a real backend.
+// account.js – handles session check, profile loading, and form toggles
 
-const signUpSection = document.querySelector('.sign-up');
-const signInSection = document.querySelector('.sign-in');
-const userProfileSection = document.querySelector('.user-profile');
-
-if (signUpSection && signInSection && userProfileSection) {
-  signUpSection.style.display = 'flex';
-  signInSection.style.display = 'none';
-  userProfileSection.style.display = 'none';
+// ---------- Helper functions ----------
+async function checkSession() {
+  try {
+    const res = await fetch('check_session.php');
+    const data = await res.json();
+    return data.logged_in === true;
+  } catch {
+    return false;
+  }
 }
 
-// Switch to Sign In
+async function loadUserProfile() {
+  try {
+    const res = await fetch('userprofile.php');
+    if (!res.ok) throw new Error('Not authenticated');
+    const user = await res.json();
+
+    document.getElementById('profileName').textContent = user.name || 'User';
+    document.getElementById('profileEmail').textContent = user.email || '';
+    if (user.avatar) {
+      document.getElementById('profileAvatar').src = user.avatar;
+    }
+    document.getElementById('profileOrders').textContent = (user.orders_count || 0) + ' Orders';
+    document.getElementById('profilePoints').textContent = (user.points || 0) + ' Treat Points';
+
+    // Show profile, hide forms
+    document.querySelector('.sign-up').style.display = 'none';
+    document.querySelector('.sign-in').style.display = 'none';
+    document.querySelector('.user-profile').style.display = 'flex';
+  } catch {
+    // If anything fails, fall back to sign‑in
+    showSignIn();
+  }
+}
+
+function showSignIn() {
+  document.querySelector('.sign-up').style.display = 'none';
+  document.querySelector('.sign-in').style.display = 'flex';
+  document.querySelector('.user-profile').style.display = 'none';
+}
+
+function showSignUp() {
+  document.querySelector('.sign-in').style.display = 'none';
+  document.querySelector('.sign-up').style.display = 'flex';
+  document.querySelector('.user-profile').style.display = 'none';
+}
+
+// ---------- Page load ----------
+window.addEventListener('DOMContentLoaded', async () => {
+  const loggedIn = await checkSession();
+  if (loggedIn) {
+    loadUserProfile();
+  } else {
+    // Default view: sign‑in (you can change to showSignUp() if you prefer)
+    showSignIn();
+  }
+});
+
+// ---------- Toggle links ----------
 document.querySelector('.signup-login a').addEventListener('click', (e) => {
   e.preventDefault();
-  signUpSection.style.display = 'none';
-  signInSection.style.display = 'flex';
-  userProfileSection.style.display = 'none';
+  showSignIn();
 });
 
-// Switch to Sign Up
 document.querySelector('.signin-signup a').addEventListener('click', (e) => {
   e.preventDefault();
-  signInSection.style.display = 'none';
-  signUpSection.style.display = 'flex';
-  userProfileSection.style.display = 'none';
+  showSignUp();
 });
 
-// Fake login → show profile
-document.querySelector('.signin-form-fields').addEventListener('submit', (e) => {
-  e.preventDefault();
-  signInSection.style.display = 'none';
-  userProfileSection.style.display = 'flex';
-});
-
-// Logout → back to Sign In
+// ---------- Logout ----------
 document.getElementById('logoutBtn').addEventListener('click', () => {
-  userProfileSection.style.display = 'none';
-  signInSection.style.display = 'flex';
+  // Redirect to logout.php – it will destroy the session and redirect back
+  window.location.href = 'logout.php';
 });

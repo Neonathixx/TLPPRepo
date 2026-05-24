@@ -58,26 +58,26 @@
                         <p>Create an account for you and your furry friend to start enjoying our artisanal treats.</p>
                     </div>
 
-                    <form action="signup.php" method="POST" class="signup-form-fields">
+                    <form class="signup-form-fields" action="signup.php" method="post">
                         <div class="owner-information">
                             <p class="owner-label"><i data-lucide="user"></i> OWNER INFORMATION</p>
 
                             <div class="fillup-form">
                                 <div class="input-group">
                                     <label for="ownerName">Owner Name</label>
-                                    <input type="text" name="Name" id="ownerName" placeholder="Your name" required>
+                                    <input type="text" id="ownerName" placeholder="Your name" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerUsername">Username</label>
-                                    <input type="text" name="Username" id="ownerUsername" placeholder="Choose a username" required minlength="3">
+                                    <input type="text" id="ownerUsername" placeholder="Choose a username" required minlength="3">
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerEmail">Email</label>
-                                    <input type="email" name="Email" id="ownerEmail" placeholder="you@example.com" required>
+                                    <input type="email" id="ownerEmail" placeholder="you@example.com" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerPassword">Password</label>
-                                    <input type="password" name="Password" id="ownerPassword" placeholder="••••••••" required minlength="3">
+                                    <input type="password" id="ownerPassword" placeholder="••••••••" required minlength="3">
                                 </div>
                                 <div class="terms-agreement">
                                     <label class="checkbox-label">
@@ -88,7 +88,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" name="submit" class="btn-signup">
+                        <button type="submit" class="btn-signup">
                             Sign Up <i data-lucide="arrow-right"></i>
                         </button>
                     </form>
@@ -116,7 +116,7 @@
                         <p>Log in to your account and pick up right where you left off.</p>
                     </div>
 
-                    <form class="signin-form-fields">
+                    <form class="signin-form-fields" action="signin.php" method="post">
                         <div class="input-group">
                             <label for="signinIdentifier">Username or Email</label>
                             <input type="text" id="signinIdentifier" placeholder="Your username or email" required>
@@ -141,24 +141,24 @@
         <section class="user-profile">
             <div class="profile-card">
                 <div class="profile-avatar-wrapper">
-                    <img src="images/default-avatar.png" alt="User avatar" class="profile-avatar">
+                    <img src="images/default-avatar.png" alt="User avatar" class="profile-avatar" id="profileAvatar">
                 </div>
-                <h2>Barkley</h2>
-                <p class="profile-email">barkley@example.com</p>
+                <h2 id="profileName">Barkley</h2>
+                <p class="profile-email" id="profileEmail">barkley@example.com</p>
 
                 <div class="profile-stats">
                     <div class="stat">
                         <i data-lucide="package"></i>
-                        <span>5 Orders</span>
+                        <span id="profileOrders">5 Orders</span>
                     </div>
                     <div class="stat">
                         <i data-lucide="heart"></i>
-                        <span>12 Treat Points</span>
+                        <span id="profilePoints">12 Treat Points</span>
                     </div>
                 </div>
 
                 <div class="profile-actions">
-                    <a href="order-history.html" class="btn btn-outline">
+                    <a href="orders.html" class="btn btn-outline">
                         <i data-lucide="clock"></i> Order History
                     </a>
                     <button class="btn btn-primary" id="logoutBtn">
