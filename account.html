@@ -58,26 +58,26 @@
                         <p>Create an account for you and your furry friend to start enjoying our artisanal treats.</p>
                     </div>
 
-                    <form class="signup-form-fields">
+                    <form action="signup.php" method="POST" class="signup-form-fields">
                         <div class="owner-information">
                             <p class="owner-label"><i data-lucide="user"></i> OWNER INFORMATION</p>
 
                             <div class="fillup-form">
                                 <div class="input-group">
                                     <label for="ownerName">Owner Name</label>
-                                    <input type="text" id="ownerName" placeholder="Your name" required>
+                                    <input type="text" name="Name" id="ownerName" placeholder="Your name" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerUsername">Username</label>
-                                    <input type="text" id="ownerUsername" placeholder="Choose a username" required minlength="3">
+                                    <input type="text" name="Username" id="ownerUsername" placeholder="Choose a username" required minlength="3">
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerEmail">Email</label>
-                                    <input type="email" id="ownerEmail" placeholder="you@example.com" required>
+                                    <input type="email" name="Email" id="ownerEmail" placeholder="you@example.com" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerPassword">Password</label>
-                                    <input type="password" id="ownerPassword" placeholder="••••••••" required minlength="3">
+                                    <input type="password" name="Password" id="ownerPassword" placeholder="••••••••" required minlength="3">
                                 </div>
                                 <div class="terms-agreement">
                                     <label class="checkbox-label">
