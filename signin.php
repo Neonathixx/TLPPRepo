@@ -1,7 +1,14 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+$domain = 'thelittlepawpatissier.shop';
+session_set_cookie_params([
+    'lifetime' => 86400,
+    'path'     => '/',
+    'domain'   => $domain,
+    'secure'   => true,
+    'httponly' => true,
+    'samesite' => 'Lax'
+]);
+session_start();
 include 'connection.php';
 
 if (isset($_POST['submit'])) {
@@ -22,16 +29,14 @@ if (isset($_POST['submit'])) {
             $_SESSION['username'] = $user['Username'];
             $_SESSION['email']    = $user['Email'];
 
-            // ✅ Instead of redirecting, show debug info
-            echo "Session ID: " . session_id() . "<br>";
-            echo "User ID in session: " . $_SESSION['user_id'] . "<br>";
-            echo "Name: " . $_SESSION['name'] . "<br>";
-            echo "<a href='check_session.php'>Now click here to check session</a>";
+            header("Location: account.html");
             exit();
         } else {
-            echo "Wrong password!";
+            header("Location: account.html?error=wrong_password");
+            exit();
         }
     } else {
-        echo "User not found!";
+        header("Location: account.html?error=user_not_found");
+        exit();
     }
 }
