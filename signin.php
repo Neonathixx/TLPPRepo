@@ -22,17 +22,16 @@ if (isset($_POST['submit'])) {
             $_SESSION['username'] = $user['Username'];
             $_SESSION['email']    = $user['Email'];
 
-            // Verify session was actually set
-            session_write_close();
-
-            header("Location: account.html");
+            // ✅ Instead of redirecting, show debug info
+            echo "Session ID: " . session_id() . "<br>";
+            echo "User ID in session: " . $_SESSION['user_id'] . "<br>";
+            echo "Name: " . $_SESSION['name'] . "<br>";
+            echo "<a href='check_session.php'>Now click here to check session</a>";
             exit();
         } else {
-            header("Location: account.html?error=wrong_password");
-            exit();
+            echo "Wrong password!";
         }
     } else {
-        header("Location: account.html?error=user_not_found");
-        exit();
+        echo "User not found!";
     }
 }
