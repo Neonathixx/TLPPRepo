@@ -52,3 +52,4 @@ foreach ($items as $item) {
 }
 
 echo json_encode(["success" => true, "order_ids" => $ordersMade]);
+?>

@@ -39,3 +39,4 @@ while ($row = $sql->fetch_assoc()) {
 }
 
 echo json_encode($orders);
+?>

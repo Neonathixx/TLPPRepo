@@ -23,3 +23,4 @@ if ($username === ADMIN_USERNAME && $password === ADMIN_PASSWORD) {
     http_response_code(401);
     echo json_encode(["error" => "Invalid admin credentials", "message" => "Invalid admin credentials"]);
 }
+?>

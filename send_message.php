@@ -32,3 +32,4 @@ if (mail($to, $subject, $body, $headers)) {
 } else {
     echo json_encode(["error" => "Failed to send message. Please try again later."]);
 }
+?>

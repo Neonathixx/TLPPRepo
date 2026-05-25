@@ -8,3 +8,4 @@ if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true) {
 } else {
     echo json_encode(["is_admin" => false]);
 }
+?>

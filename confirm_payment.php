@@ -60,3 +60,4 @@ if ($sql->execute() && $sql->affected_rows > 0) {
 
 $sql->close();
 $details->close();
+?>
