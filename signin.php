@@ -23,14 +23,14 @@ if (isset($_POST['submit'])) {
             $_SESSION['username'] = $user['Username'];
             $_SESSION['email']    = $user['Email'];
 
-            header("Location: account.php?loggedin=1");
+            header("Location: account.html?loggedin=1");
             exit();
         } else {
-            header("Location: account.php?error=wrong_password");
+            header("Location: account.html?error=wrong_password");
             exit();
         }
     } else {
-        header("Location: account.php?error=user_not_found");
+        header("Location: account.html?error=user_not_found");
         exit();
     }
 

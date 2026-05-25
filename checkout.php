@@ -5,6 +5,7 @@ header('Content-Type: application/json');
 include 'connection.php';
 
 if (!isset($_SESSION['user_id'])) {
+    http_response_code(401);
     echo json_encode(["error" => "Not logged in"]);
     exit();
 }
@@ -14,27 +15,23 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-$userID   = $_SESSION['user_id'];
-$cartJSON = $_POST['cart'] ?? null;
+// cart.js sends JSON body
+$input = json_decode(file_get_contents('php://input'), true);
+$items = $input['items'] ?? [];
 
-if (!$cartJSON) {
-    echo json_encode(["error" => "No cart data received"]);
-    exit();
-}
-
-$cart = json_decode($cartJSON, true);
-
-if (!$cart || count($cart) === 0) {
+if (!$items || count($items) === 0) {
     echo json_encode(["error" => "Cart is empty"]);
     exit();
 }
 
+$userID     = $_SESSION['user_id'];
 $ordersMade = [];
 
-foreach ($cart as $item) {
-    $productID   = (int)$item['ProductID'];
-    $quantity    = (int)$item['Quantity'];
-    $priceInPHP  = (float)$item['PriceInPHP'];
+foreach ($items as $item) {
+    // cart.js stores items with: id, name, price, qty
+    $productID   = (int)($item['id'] ?? 0);
+    $quantity    = (int)($item['qty'] ?? 1);
+    $priceInPHP  = (float)($item['price'] ?? 0);
     $totalPrice  = $priceInPHP * $quantity;
     $orderStatus = "Filing Form";
     $orderMade   = date("Y-m-d H:i:s");

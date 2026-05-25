@@ -58,7 +58,7 @@
                         <p>Create an account for you and your furry friend to start enjoying our artisanal treats.</p>
                     </div>
 
-                    <form class="signup-form-fields" action="signup.php" method="post">
+                    <form class="signup-form-fields" action="signup.php" method="POST">
                         <div class="owner-information">
                             <p class="owner-label"><i data-lucide="user"></i> OWNER INFORMATION</p>
 
@@ -119,16 +119,16 @@
                     <form class="signin-form-fields" action="signin.php" method="post">
                         <div class="input-group">
                             <label for="signinIdentifier">Username or Email</label>
-                            <input type="text" id="signinIdentifier" placeholder="Your username or email" required>
+                            <input type="text" id="signinIdentifier" name="Identifier" placeholder="Your username or email" required>
                         </div>
                         <div class="input-group">
                             <label for="signinPassword">Password</label>
-                            <input type="password" id="signinPassword" placeholder="••••••••" required>
+                            <input type="password" id="signinPassword" name="Password" placeholder="••••••••" required>
                         </div>
                         <div class="forgot-password">
                             <a href="#">Forgot password?</a>
                         </div>
-                        <button type="submit" class="btn-signin">
+                        <button type="submit" name="submit" class="btn-signin">
                             Log In <i data-lucide="arrow-right"></i>
                         </button>
                     </form>
