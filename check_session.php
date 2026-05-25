@@ -1,6 +1,7 @@
 <?php
-
-require_once 'session_config.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 header('Content-Type: application/json');
 
 if (isset($_SESSION['user_id'])) {
@@ -8,4 +9,3 @@ if (isset($_SESSION['user_id'])) {
 } else {
     echo json_encode(["logged_in" => false]);
 }
-?>
