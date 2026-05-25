@@ -10,7 +10,7 @@
 
     $sql = $conn -> prepare("INSERT INTO Users(Name, Username, Email, Password) VALUES (?, ?, ?, ?)");
 
-    $sql->bind_param("sss", $name, $username, $email, $password);
+    $sql->bind_param("ssss", $name, $username, $email, $password);
 
     }
 
