@@ -1,7 +1,6 @@
 <?php
 
-ini_set('session.cookie_samesite', 'Lax');
-session_start();
+require_once 'session_config.php';
 include 'connection.php';
 
 error_reporting(E_ALL);

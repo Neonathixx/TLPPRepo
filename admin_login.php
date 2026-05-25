@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+require_once 'session_config.php';
 header('Content-Type: application/json');
 
 define('ADMIN_USERNAME', 'tlpp_admin');

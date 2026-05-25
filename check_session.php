@@ -1,7 +1,6 @@
 <?php
 
-ini_set('session.cookie_samesite', 'Lax');
-session_start();
+require_once 'session_config.php';
 header('Content-Type: application/json');
 
 if (isset($_SESSION['user_id'])) {

@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-header('Content-Type: application/json');
+require_once 'session_config.php';
 include 'connection.php';
 
 if (!isset($_SESSION['user_id'])) {
