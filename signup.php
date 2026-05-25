@@ -8,16 +8,31 @@ if(isset($_POST['submit'])){
     $email = $_POST['Email'];
     $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
 
-    $sql = $conn->prepare("INSERT INTO Users(Name, Username, Email, Password) VALUES (?, ?, ?, ?)");
-    $sql->bind_param("ssss", $name, $username, $email, $password);
+    // ✅ Check if email already exists
+    $check = $conn->prepare("SELECT Email FROM Users WHERE Email = ?");
+    $check->bind_param("s", $email);
+    $check->execute();
+    $check->store_result();
 
-    if($sql->execute()){
-        header("Location: account.html?success=1");
+    if($check->num_rows > 0){
+        // Email already taken
+        header("Location: account.html?error=email_exists");
         exit();
     } else {
-        echo "Error: " . $sql->error;
+        // Email is free, proceed with insert
+        $sql = $conn->prepare("INSERT INTO Users(Name, Username, Email, Password) VALUES (?, ?, ?, ?)");
+        $sql->bind_param("ssss", $name, $username, $email, $password);
+
+        if($sql->execute()){
+            header("Location: account.html?success=1");
+            exit();
+        } else {
+            echo "Error: " . $sql->error;
+        }
+
+        $sql->close();
     }
 
-    $sql->close();
+    $check->close();
 }
 ?>
