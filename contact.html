@@ -39,7 +39,93 @@
 
     <!-- vvv Main vvv -->
 
-    
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <img src="images/contact-bg.png" alt="" class="contact-hero-bg">
+            <div class="contact-hero-overlay"></div>
+            <div class="contact-hero-content">
+                <h1>GET IN TOUCH</h1>
+                <p>We’d love to hear from you and your furry friends! Whether it’s a custom cake request or a simple “woof”, reach out to our team.</p>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <h2>SEND US A MESSAGE</h2>
+                <form class="contact-form" action="send_message.php" method="post">
+                    <div class="form-group">
+                        <label for="name">YOUR NAME</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">YOUR MESSAGE</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your pup or cake ideas..." rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary contact-submit">
+                        SEND WOOF <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Info & Map Section -->
+            <div class="contact-info">
+                <section class="contact-address">
+                    <h2>our address</h2>
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="address-text">
+                            <h3>Location</h3>
+                            <p>Lot 23 Block 6 Phase 2, Sampaguita St., Elysian Homes,<br>Bahay Pare, Meycauayan, Philippines, 3020</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Map -->
+                <div class="contact-map">
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps?q=Lot+23+Block+6+Phase+2+Sampaguita+St+Elysian+Homes+Bahay+Pare+Meycauayan+Bulacan&output=embed"
+                            width="100%"
+                            height="250"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="map-badge">WE ARE HERE!</div>
+                </div>
+
+                <!-- Social Media -->
+                <section class="contact-social">
+                    <h3>or contact us here</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/TheLittlePawPatissier" target="_blank" aria-label="Facebook" class="social-circle">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/thelittlepawpatissier/" target="_blank" aria-label="Instagram" class="social-circle">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="mailto:hello@littlepawpatissier.com" aria-label="Email" class="social-circle">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="tel:+639994996433" aria-label="Phone" class="social-circle">
+                            <i data-lucide="phone"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
     <!-- ^^^ Main ^^^ -->
 

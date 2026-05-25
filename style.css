@@ -2071,3 +2071,1840 @@ footer {
 }
 
 /* ===== Orders Page Styles ===== */
+
+
+
+/* ===== Admin Page Styles ===== */
+
+/* vvv Admin Login Page vvv */
+
+.admin-login-page {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-login-form {
+    background: white;
+    padding: 48px;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    width: 100%;
+}
+
+.admin-login-form .input-group:last-of-type {
+    margin-bottom: 20px;   /* adds space between password and button */
+}
+
+.admin-login-heading {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.admin-login-sub {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: var(--black);
+    margin: 0 0 32px;
+    text-align: center;
+}
+
+.login-error {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ^^^ Admin Login Page ^^^ */
+
+/* vvv Admin Panel Page vvv */
+
+.admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.admin-heading {
+    font-family: "Bangers", system-ui;
+    font-size: 64px;
+    color: var(--brown);
+    margin: 0 0 8px;
+}
+
+.admin-subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    color: var(--black);
+    margin: 0 0 40px;
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(75, 54, 33, 0.08);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #E0D6C8;
+}
+
+.admin-table th {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--brown);
+    background: var(--beige);
+}
+
+.admin-table td {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    color: var(--black);
+}
+
+.order-link {
+    color: var(--brown);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.order-link:hover {
+    text-decoration: underline;
+}
+
+.admin-status {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.status-pending-approval { background: #fef3c7; color: #92400e; }
+.status-pending-confirmation { background: #e0e7ff; color: #3730a3; }
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.admin-btn {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.admin-btn:active {
+    transform: scale(0.95);
+}
+
+.approve-btn {
+    background: var(--green);
+    color: white;
+}
+
+.decline-btn {
+    background: #BA1A1A;
+    color: white;
+}
+
+.loading-message,
+.empty-message,
+.error-message {
+    text-align: center;
+    padding: 40px;
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.error-message {
+    color: #BA1A1A;
+}
+
+/* ^^^ Admin Panel Page ^^^ */
+
+/* ===== Admin Panel Page ===== */
+
+
+
+/* ===== FAQ Page ===== */
+
+.faq-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* vvv FAQ Hero vvv */
+.faq-hero {
+    text-align: center;
+    padding: 40px 0 60px;
+}
+
+.faq-title {
+    font-family: "Bangers", system-ui;
+    font-size: 64px;
+    color: var(--brown);
+    margin: 0 0 16px;
+    line-height: 1.1;
+}
+
+.faq-subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    color: #4e453d;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ^^^ FAQ Hero ^^^ */
+
+/* vvv FAQ Grid vvv */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.faq-category {
+    background: white;
+    border: 1px solid #e4e4cc;
+    border-radius: 12px;
+    padding: 33px;
+    box-shadow: 0 4px 10px rgba(75, 54, 33, 0.08);
+}
+
+.faq-category-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e4e4cc;
+    margin-bottom: 24px;
+}
+
+.faq-category-header i {
+    width: 24px;
+    height: 24px;
+    color: var(--brown);
+    background: var(--beige);
+    border-radius: 50%;
+    padding: 12px;
+    stroke-width: 2;
+}
+
+.faq-category-header h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* ^^^ FAQ Grid ^^^ */
+
+/* vvv FAQ Items (expandable) vvv */
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faq-item {
+    border-top: 1px solid #efefd7;
+}
+
+.faq-item:first-child {
+    border-top: none;
+}
+
+.faq-item summary {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    padding: 16px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;           /* removes default triangle */
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary i {
+    width: 20px;
+    height: 20px;
+    color: var(--brown);
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 0 16px 0;
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #4e453d;
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* ^^^ FAQ Items ^^^ */
+
+/* vvv Call to Action (FAQ) vvv */
+.faq-cta {
+    background: #eaead1;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(75, 54, 33, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-cta::before {
+    content: '';
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 125px;
+    height: 112px;
+    background: url('data:image/svg+xml,…') no-repeat; /* we'll use a simple paw print or omit */
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.faq-cta h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0 0 16px;
+}
+
+.faq-cta p {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #4e453d;
+    max-width: 512px;
+    margin: 0 auto 24px;
+    line-height: 1.5;
+}
+
+.faq-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 32px;
+    font-size: 14px;
+}
+
+.faq-cta .btn i {
+    width: 16px;
+    height: 16px;
+}
+
+/* ^^^ Call to Action ^^^ */
+
+/* ===== FAQ Page ===== */
+
+
+
+/* ===== Privacy Policy Page Styles ===== */
+
+.pp-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* vvv Hero vvv */
+.pp-hero {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.pp-hero h1 {
+    font-family: "Bangers", system-ui;
+    font-size: 64px;
+    color: var(--brown);
+    margin: 0 0 16px;
+    line-height: 1.1;
+}
+
+.pp-hero p {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    color: #4e453d;
+    max-width: 672px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ^^^ Hero ^^^ */
+
+/* vvv Layout vvv */
+.pp-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* ^^^ Layout ^^^ */
+
+/* vvv Sidebar Navigation vvv */
+.pp-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.pp-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: 2px solid #d2c4ba;
+    padding-left: 18px;
+}
+
+.pp-nav-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4e453d;
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1.4;
+}
+
+.pp-nav-link:hover,
+.pp-nav-link.active {
+    color: var(--brown);
+}
+
+/* ^^^ Sidebar Navigation ^^^ */
+
+/* vvv Content Sections vvv */
+.pp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.pp-section {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(197, 160, 125, 0.3);
+    border-radius: 20px;
+    padding: 49px;
+    box-shadow: 0 4px 20px rgba(75, 54, 33, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.pp-section-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.pp-section-icon i {
+    width: 32px;
+    height: 32px;
+    color: var(--green);
+    stroke-width: 2;
+}
+
+.pp-section h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.pp-section p {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #1b1d0e;
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+
+.pp-bold {
+    font-weight: 700;
+}
+
+/* ^^^ Content Sections ^^^ */
+
+/* vvv Section 1 – Information We Collect vvv */
+.pp-section-info {
+    padding-left: 57px;
+}
+
+.pp-section-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: var(--green);
+    opacity: 0.8;
+    border-radius: 0 4px 4px 0;
+}
+
+.pp-list {
+    list-style: none;
+    padding: 0 0 0 24px;
+    margin: 0 0 16px;
+}
+
+.pp-list li {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #1b1d0e;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.pp-list li::before {
+    content: "•";
+    position: absolute;
+    left: -18px;
+    color: var(--brown);
+    font-weight: 700;
+}
+
+.pp-list li strong {
+    font-weight: 700;
+}
+
+/* ^^^ Section 1 ^^^ */
+
+/* vvv Section 2 – How We Use Your Data vvv */
+.pp-section-data {
+    overflow: hidden;
+}
+
+.pp-section-decor {
+    position: absolute;
+    right: -31px;
+    top: -31px;
+    width: 128px;
+    height: 128px;
+    background: #fedcbe;
+    opacity: 0.2;
+    border-radius: 0 0 0 9999px;
+}
+
+.pp-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.pp-small-card {
+    background: var(--beige);
+    border: 1px solid #d2c4ba;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.pp-small-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brown);
+    margin: 0 0 8px;
+}
+
+.pp-small-card p {
+    font-size: 14px;
+    color: #1b1d0e;
+    margin: 0;
+}
+
+/* ^^^ Section 2 ^^^ */
+
+/* vvv Section 3 – Pet Data Privacy vvv */
+.pp-section-pet {
+    background: #e4e4cc;
+    border-color: #9ed49b;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.pp-section-pet .pp-section-icon i {
+    color: #4e351a;
+}
+
+/* ^^^ Section 3 ^^^ */
+
+/* vvv Section 4 – Cookies vvv */
+.pp-section-cookies {
+    padding-bottom: 65px;
+}
+
+.pp-section-cookies .pp-section-icon i {
+    color: var(--green);
+}
+
+/* ^^^ Section 4 ^^^ */
+
+/* ===== Privacy Policy Page Styles ===== */
+
+
+
+/* ===== Terms and Conditions Page Styles ===== */
+
+.tc-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.tc-hero {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.tc-hero h1 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    margin: 0 0 8px;
+}
+
+.tc-date {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #80756c;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin: 0;
+}
+
+.tc-article {
+    background: white;
+    border: 1px solid rgba(228, 228, 204, 0.5);
+    border-radius: 12px;
+    padding: 49px;
+    box-shadow: 0 4px 15px rgba(75, 54, 33, 0.05);
+}
+
+.tc-section {
+    margin-bottom: 24px;
+}
+
+.tc-section h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #33210d;
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.tc-section p {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #1b1d0e;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.tc-section ul,
+.tc-section ol {
+    margin: 0 0 12px;
+    padding-left: 24px;
+}
+
+.tc-section li {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #1b1d0e;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.tc-section a {
+    color: #1b1d0e;
+    text-decoration: underline;
+}
+
+.tc-contact {
+    background: rgba(228, 228, 204, 0.3);
+    border: 1px solid rgba(210, 196, 186, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 12px;
+}
+
+.tc-contact p {
+    margin: 0 0 4px;
+}
+
+.tc-contact a {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.tc-toc a {
+    color: #1b1d0e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.tc-toc a:hover {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+/* ===== Terms and Conditions Page Styles ===== */
+
+/* ===== About Page Styles ===== */
+
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 64px;
+}
+
+/* vvv Hero Section vvv */
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.about-hero-text h1 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: var(--brown);
+    line-height: 1.1;
+    margin: 0 0 24px;
+}
+
+.about-hero-text p {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    color: #4e453d;
+    line-height: 1.6;
+    margin: 0 0 24px;
+}
+
+.about-hero-motto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.motto-line {
+    width: 48px;
+    height: 2px;
+    background: #bd9f83;
+}
+
+.about-hero-motto em {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    color: #bd9f83;
+    letter-spacing: 0.7px;
+}
+
+.about-hero-image {
+    position: relative;
+    height: 400px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(57,105,58,0.1);
+    transform: rotate(-3deg);
+    border-radius: 24px;
+    z-index: 1;
+}
+
+/* ^^^ Hero Section ^^^ */
+
+/* vvv Divider vvv */
+.about-divider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    opacity: 0.6;
+}
+
+.about-divider svg {
+    width: 200px;
+    height: 60px;
+}
+
+/* ^^^ Divider ^^^ */
+
+/* vvv Meet the Baker vvv */
+.about-baker {
+    margin-bottom: 80px;
+}
+
+.baker-card {
+    background: #f9f9e8;
+    border: 1px solid rgba(210,196,186,0.2);
+    border-radius: 24px;
+    box-shadow: 0 20px 20px rgba(75,54,33,0.08);
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 49px;
+}
+
+.baker-avatar {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.baker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.baker-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--green);
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.baker-info h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 32px;
+    color: #33210d;
+    margin: 0 0 16px;
+}
+
+.baker-info p {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #4e453d;
+    line-height: 1.6;
+    margin: 0 0 24px;
+}
+
+.baker-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.baker-buttons .btn {
+    padding: 14px 32px;
+    font-size: 14px;
+}
+
+/* ^^^ Meet the Baker ^^^ */
+
+/* vvv Safety First Ingredients vvv */
+.about-ingredients {
+    margin-bottom: 80px;
+}
+
+.about-ingredients h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: #33210d;
+    text-align: center;
+    margin: 0 0 48px;
+}
+
+.ingredients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ingredient-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    width: 250px;
+    height: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    gap: 2px;
+}
+
+.ingredient-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.ingredient-icon-lucide {
+    width: 40px;
+    height: 40px;
+    color: var(--green);
+    stroke-width: 2;
+    margin-bottom: 4px;
+}
+
+.ingredient-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #33210d;
+    margin: 0;
+}
+
+.ingredient-card p {
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    color: #4e453d;
+    margin: 0;
+}
+
+/* ^^^ Safety First Ingredients ^^^ */
+
+/* vvv Bakery Journey Gallery vvv */
+.about-journey {
+    margin-bottom: 80px;
+}
+
+.journey-header {
+    margin-bottom: 48px;
+}
+
+.journey-header h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: #33210d;
+    margin: 0 0 4px;
+}
+
+.journey-header p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #4e453d;
+    letter-spacing: 0.7px;
+    margin: 0;
+}
+
+.journey-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 2px;
+    padding: 9px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    transform: rotate(var(--rotate, 0deg));
+}
+
+.gallery-item:nth-child(1) { --rotate: -1deg; }
+.gallery-item:nth-child(2) { --rotate: 1.5deg; }
+.gallery-item:nth-child(3) { --rotate: -1deg; }
+.gallery-item:nth-child(4) { --rotate: 1.5deg; }
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1px;
+}
+
+/* ^^^ Bakery Journey Gallery ^^^ */
+
+/* ===== About Page Styles ===== */
+
+
+
+/* ===== Contact Page Styles ===== */
+
+/* vvv Hero Section vvv */
+.contact-hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(75, 54, 33, 0.4);
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 672px;
+    padding: 0 24px;
+}
+
+.contact-hero-content h1 {
+    font-family: "Bangers", system-ui;
+    font-size: 64px;
+    margin: 0 0 16px;
+    text-shadow: 0 4px 1.5px rgba(0,0,0,0.1), 0 10px 4px rgba(0,0,0,0.04);
+}
+
+.contact-hero-content p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.06), 0 4px 1.5px rgba(0,0,0,0.07);
+}
+
+/* ^^^ Hero Section ^^^ */
+
+/* vvv Main Content Grid vvv */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 64px;
+    position: relative;
+    z-index: 3;
+}
+
+/* ^^^ Main Content Grid ^^^ */
+
+/* vvv Contact Form vvv */
+.contact-form-section {
+    background: white;
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 4px 10px rgba(75, 54, 33, 0.08);
+}
+
+.contact-form-section h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: #33210d;
+    margin: 0 0 32px;
+    line-height: 1.2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #4e453d;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    background: var(--beige);
+    border: 1px solid #d2c4ba;
+    border-radius: 12px;
+    padding: 14px 17px;
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #1b1d0e;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6b7280;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--green);
+}
+
+.contact-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.contact-submit i {
+    width: 16px;
+    height: 16px;
+}
+
+.contact-submit:active {
+    transform: scale(0.9);
+    background: #1b3e1f;
+}
+
+/* ^^^ Contact Form ^^^ */
+
+/* vvv Address Section vvv */
+.contact-address {
+    margin-bottom: 48px;
+}
+
+.contact-address h2 {
+    font-family: "Bangers", system-ui;
+    font-size: 48px;
+    color: #33210d;
+    margin: 0 0 24px;
+    line-height: 1.2;
+}
+
+.address-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.address-icon {
+    width: 48px;
+    height: 48px;
+    background: #b7eeb3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.address-icon i {
+    width: 24px;
+    height: 24px;
+    color: var(--green);
+}
+
+.address-text h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #33210d;
+    margin: 0 0 4px;
+}
+
+.address-text p {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #4e453d;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ^^^ Address Section ^^^ */
+
+/* vvv Map vvv */
+.contact-map {
+    position: relative;
+    border: 2px solid #e4e4cc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 48px;
+    box-shadow: 0 4px 20px rgba(75, 54, 33, 0.08);
+}
+
+.map-embed {
+    height: 250px;
+}
+
+.map-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #33210d;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+
+/* ^^^ Map ^^^ */
+
+/* vvv Social Media Circles vvv */
+.contact-social h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #4e453d;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin: 0 0 16px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.social-circle {
+    width: 56px;
+    height: 56px;
+    background: #e4e4cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.social-circle i {
+    width: 24px;
+    height: 24px;
+    color: #33210d;
+}
+
+.social-circle:hover {
+    background: #d2c4ba;
+}
+
+/* ^^^ Social Media Circles ^^^ */
+
+/* ===== Contact Page Styles ===== */
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* ---------- Tablet (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .inner-header {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .website-title {
+    font-size: 36px;
+  }
+  .header-nav ul {
+    gap: 1.2rem;
+  }
+  .header-nav a {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .inner-footer {
+    padding: 40px 32px;
+  }
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 30%;
+    height: auto;
+  }
+
+  /* Hero – remove fixed height, let content breathe */
+  .hero-section {
+    height: auto;
+    min-height: 500px;
+  }
+  .hero-content {
+    padding: 80px 64px;
+    position: relative;
+    justify-content: flex-start;
+  }
+  .hero-background,
+  .hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(251, 251, 226, 0.9) 0%,
+      rgba(251, 251, 226, 0.4) 50%,
+      rgba(251, 251, 226, 0) 100%
+    );
+  }
+  .hero-subtitle,
+  .hero-title {
+    font-size: 64px;
+  }
+  .hero-description {
+    font-size: 18px;
+    max-width: 440px;
+  }
+  .btn {
+    padding: 18px 48px;
+  }
+
+  /* Philosophy */
+  .philosophy-section {
+    height: auto;
+    padding: 60px 32px;
+    gap: 48px;
+  }
+  .philosophy-cards {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .philosophy-card {
+    width: 280px;
+    height: auto;
+    padding: 32px;
+  }
+
+  /* Products */
+  .products-section {
+    height: auto;
+    padding: 60px 32px;
+  }
+  .products-container {
+    gap: 48px;
+  }
+  .products-cards {
+    height: auto;
+    overflow-x: visible;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-card {
+    width: 400px;
+    height: auto;
+  }
+
+  /* Fursidents */
+  .fursidents-section {
+    height: auto;
+    padding: 60px 32px;
+    gap: 48px;
+  }
+  .fursidents-header {
+    width: 100%;
+    height: auto;
+  }
+  .fursidents-cards {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .fursident-bg,
+  .fursident-card {
+    width: 280px;
+    height: auto;
+  }
+
+  /* Account forms */
+  .signup-form,
+  .signin-form {
+    flex-direction: column;
+  }
+  .signup-left,
+  .signin-left {
+    width: 100%;
+    height: 250px;
+  }
+  .signup-right,
+  .signin-right {
+    width: 100%;
+  }
+
+  /* Menu cards */
+  .pastry-card {
+    width: 400px;
+  }
+  .pastry-image {
+    height: 350px;
+  }
+  .btn-add-cart {
+    width: 100%;
+  }
+
+  /* Cart layout */
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* About */
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-hero-image {
+    height: 300px;
+  }
+  .baker-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Mobile (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* Body padding */
+  body {
+    min-height: 100vh;
+  }
+
+  header {
+    height: auto;
+    padding: 16px 24px;
+  }
+  .inner-header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
+  .website-title {
+    font-size: 32px;
+    text-align: center;
+  }
+  .header-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .header-nav a {
+    font-size: 0.85rem;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .inner-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 24px;
+  }
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+  .footer-logo {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .important-links ul,
+  .visit-links ul {
+    align-items: center;
+  }
+
+  .hero-section {
+    height: auto;
+    min-height: 0;
+    position: relative;
+  }
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .image-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(251, 251, 226, 0.95) 0%,
+      rgba(251, 251, 226, 0.5) 60%,
+      rgba(251, 251, 226, 0) 100%
+    );
+  }
+  .hero-content {
+    position: relative;
+    padding: 60px 24px;
+    min-height: 420px;
+  }
+  .hero-subtitle,
+  .hero-title {
+    font-size: 48px;
+    line-height: 1;
+  }
+  .hero-description {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .btn {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+
+  /* Philosophy */
+  .philosophy-section {
+    padding: 40px 24px;
+    gap: 32px;
+  }
+  .philosophy-title h2 {
+    font-size: 28px;
+  }
+  .divider {
+    flex-direction: column;
+  }
+  .divider-line {
+    display: none;
+  }
+  .philosophy-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+  .philosophy-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+  }
+
+  /* Products */
+  .products-section {
+    padding: 40px 24px;
+  }
+  .products-container {
+    gap: 32px;
+  }
+  .products-title {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+  .sub-title {
+    width: 100%;
+    height: auto;
+  }
+  .product-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .product-card img {
+    height: 200px;
+  }
+  .cart-content {
+    height: auto;
+    padding: 16px;
+  }
+  .card-product-title {
+    font-size: 32px;
+  }
+
+  /* Fursidents */
+  .fursidents-section {
+    padding: 40px 24px;
+    gap: 32px;
+  }
+  .fursidents-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+  .fursident-bg,
+  .fursident-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Account pages */
+  .sign-up,
+  .sign-in,
+  .user-profile {
+    padding: 40px 24px;
+    min-height: auto;
+  }
+  .signup-form,
+  .signin-form {
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+  }
+  .signup-left,
+  .signin-left {
+    height: 200px;
+  }
+  .signup-right,
+  .signin-right {
+    width: 100%;
+    padding: 32px 24px;
+  }
+  .profile-card {
+    padding: 40px 24px;
+  }
+
+  /* Menu */
+  .menu-pastries,
+  .menu-cakes-grid,
+  .menu-bundles-grid {
+    padding: 0 24px 40px;
+  }
+  .pastry-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .pastry-image {
+    height: 300px;
+  }
+  .btn-add-cart {
+    width: 100%;
+  }
+
+  /* Cart */
+  .cart-page {
+    padding: 40px 24px;
+  }
+  .cart-heading {
+    font-size: 40px;
+  }
+  .cart-item {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+  }
+  .cart-item-quantity {
+    margin-top: 8px;
+  }
+  .cart-item-subtotal {
+    min-width: auto;
+  }
+
+  /* Orders */
+  .order-history-page {
+    padding: 40px 24px;
+  }
+  .order-heading {
+    font-size: 40px;
+  }
+  .order-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .order-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Admin pages */
+  .admin-page {
+    padding: 40px 24px;
+  }
+  .admin-heading {
+    font-size: 40px;
+  }
+  .admin-table th,
+  .admin-table td {
+    padding: 12px 8px;
+  }
+
+  /* About */
+  .about-page {
+    padding: 40px 24px;
+  }
+  .about-hero-text h1 {
+    font-size: 36px;
+  }
+  .ingredients-grid {
+    gap: 8px;
+  }
+  .ingredient-card {
+    width: 140px;
+    height: auto;
+    padding: 16px;
+  }
+  .ingredient-card h3 {
+    font-size: 16px;
+  }
+  .journey-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact */
+  .contact-hero {
+    height: 350px;
+  }
+  .contact-hero-content h1 {
+    font-size: 40px;
+  }
+  .contact-grid {
+    padding: 40px 24px;
+  }
+  .contact-form-section {
+    padding: 32px 24px;
+  }
+
+  /* FAQ */
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-title {
+    font-size: 40px;
+  }
+  .faq-category-header h2 {
+    font-size: 36px;
+  }
+
+  /* Privacy / T&C */
+  .pp-layout {
+    grid-template-columns: 1fr;
+  }
+  .pp-sidebar {
+    position: static;
+    border-left: none;
+    margin-bottom: 24px;
+  }
+  .pp-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .tc-article {
+    padding: 24px;
+  }
+}
