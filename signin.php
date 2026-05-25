@@ -1,38 +1,41 @@
 <?php
-
 session_start();
 include 'connection.php';
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if (isset($_POST['submit'])) {
-    $identifier = $_POST['Identifier']; // username or email
+    $identifier = $_POST['Identifier'];
     $password   = $_POST['Password'];
 
-    // Find user by email or username
+    echo "Identifier received: " . $identifier . "<br>";
+
     $sql = $conn->prepare("SELECT UserID, Name, Username, Email, Password FROM Users WHERE Email = ? OR Username = ?");
     $sql->bind_param("ss", $identifier, $identifier);
     $sql->execute();
     $result = $sql->get_result();
 
+    echo "Rows found: " . $result->num_rows . "<br>";
+
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
 
+        echo "Password from DB: " . $user['Password'] . "<br>";
+        echo "Password verify result: " . (password_verify($password, $user['Password']) ? 'TRUE' : 'FALSE') . "<br>";
+
         if (password_verify($password, $user['Password'])) {
-            // Password correct — start session
             $_SESSION['user_id']  = $user['UserID'];
             $_SESSION['name']     = $user['Name'];
             $_SESSION['username'] = $user['Username'];
             $_SESSION['email']    = $user['Email'];
 
-            header("Location: account.html?loggedin=1");
-            exit();
+            echo "Session set! user_id = " . $_SESSION['user_id'];
         } else {
-            header("Location: account.html?error=wrong_password");
-            exit();
+            echo "Password mismatch!";
         }
     } else {
-        header("Location: account.html?error=user_not_found");
-        exit();
+        echo "User not found!";
     }
-
-    $sql->close();
 }
+?>
