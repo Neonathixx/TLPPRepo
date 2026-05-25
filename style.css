@@ -3573,6 +3573,7 @@ footer {
     min-height: 100vh;
   }
 
+  /* Header – stack items vertically */
   header {
     height: auto;
     padding: 16px 24px;
@@ -3627,6 +3628,7 @@ footer {
     align-items: center;
   }
 
+  /* Hero – flexible height, full image coverage */
   .hero-section {
     height: auto;
     min-height: 0;

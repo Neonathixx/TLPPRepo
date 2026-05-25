@@ -58,26 +58,26 @@
                         <p>Create an account for you and your furry friend to start enjoying our artisanal treats.</p>
                     </div>
 
-                    <form class="signup-form-fields" action="signup.php" method="POST">
+                    <form class="signup-form-fields" action="signup.php" method="post">
                         <div class="owner-information">
                             <p class="owner-label"><i data-lucide="user"></i> OWNER INFORMATION</p>
 
                             <div class="fillup-form">
                                 <div class="input-group">
                                     <label for="ownerName">Owner Name</label>
-                                    <input type="text" id="ownerName" name="Name" placeholder="Your name" required>
+                                    <input type="text" id="ownerName" placeholder="Your name" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerUsername">Username</label>
-                                    <input type="text" id="ownerUsername" name="Username" placeholder="Choose a username" required minlength="3">
+                                    <input type="text" id="ownerUsername" placeholder="Choose a username" required minlength="3">
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerEmail">Email</label>
-                                    <input type="email" id="ownerEmail" name="Email" placeholder="you@example.com" required>
+                                    <input type="email" id="ownerEmail" placeholder="you@example.com" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="ownerPassword">Password</label>
-                                    <input type="password" id="ownerPassword" name="Password" placeholder="••••••••" required minlength="8">
+                                    <input type="password" id="ownerPassword" name="password" placeholder="••••••••" required minlength="8">
                                 </div>
                                 <div class="terms-agreement">
                                     <label class="checkbox-label">
@@ -88,7 +88,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" name='submit' class="btn-signup">
+                        <button type="submit" class="btn-signup">
                             Sign Up <i data-lucide="arrow-right"></i>
                         </button>
                     </form>
@@ -119,16 +119,16 @@
                     <form class="signin-form-fields" action="signin.php" method="post">
                         <div class="input-group">
                             <label for="signinIdentifier">Username or Email</label>
-                            <input type="text" id="signinIdentifier" name="Identifier" placeholder="Your username or email" required>
+                            <input type="text" id="signinIdentifier" placeholder="Your username or email" required>
                         </div>
                         <div class="input-group">
                             <label for="signinPassword">Password</label>
-                            <input type="password" id="signinPassword" name="Password" placeholder="••••••••" required>
+                            <input type="password" id="signinPassword" placeholder="••••••••" required>
                         </div>
                         <div class="forgot-password">
                             <a href="#">Forgot password?</a>
                         </div>
-                        <button type="submit" name="submit" class="btn-signin">
+                        <button type="submit" class="btn-signin">
                             Log In <i data-lucide="arrow-right"></i>
                         </button>
                     </form>
