@@ -21,6 +21,8 @@
 
      if($sql->execute()){
         echo "User registered successfully!";
+        header("Location: account.html?success=1");
+        exit();
     } else {
         echo "Error: " . $sql->error;
     }
